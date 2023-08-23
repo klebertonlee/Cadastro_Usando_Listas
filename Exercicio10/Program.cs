@@ -23,11 +23,11 @@ namespace Exercicio10
             Console.WriteLine("Digite os códigos do produto:");
             Console.WriteLine();
 
-
+            int id = int.Parse(Console.ReadLine());
             for (int i = 1; i <= Tipos; i++)
             {
                 Console.Write("Código: ");
-                int id = int.Parse(Console.ReadLine());
+                 id = int.Parse(Console.ReadLine());
                 Console.Write("Nome do Produto: ");
                 string nome = Console.ReadLine();
                 Console.Write("Valor de custo de Compra do Produto: $");
@@ -35,7 +35,6 @@ namespace Exercicio10
                 Console.Write("Quantidade do produto: ");
                 int quantidade = int.Parse(Console.ReadLine());
                 Console.WriteLine();
-
                 list.Add(new TesteList(id, nome, valor, quantidade));              
             }
 
@@ -45,14 +44,17 @@ namespace Exercicio10
                 Console.WriteLine();
                 Console.WriteLine(item);
             }
-
             
+            
+            Console.WriteLine("Deseja remover algum item?");
+            Console.Write("Digite o codigo do item: ");
+            int remove = int.Parse(Console.ReadLine());
+            remove = id;
+            list.Remove(remove);
 
 
 
-
-
-
+            Console.ReadKey();
         }
     }
 }
